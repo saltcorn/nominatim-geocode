@@ -1,6 +1,6 @@
 # nominatim-geocode
 
-Geocoding with Nominatim
+Geocoding with Nominatim from OpenStreetMap
 
 This plug-in supplies functions for geocoding (converting addresses to latitude and longitude coordinates) for use in Saltcorn calculated functions.
 
@@ -10,7 +10,7 @@ Two functions are supplied: `geocode_lat` and `geocode_long`. These two function
 - Expect as argument an object with valid query parameters to the API
 
 This can be as vague as `{ q: address }` or can contain more structure:
-`{country: 'de', postalcode:'10115', street: 'Somestreet XX'}`. See the documentation for the underlying node library [nominatim-geocoder](https://www.npmjs.com/package/nominatim-geocoder) and examples below,
+`{country: 'de', postalcode:'10115', street: 'Somestreet XX'}`. See the documentation for the underlying node library [nominatim-geocoder](https://www.npmjs.com/package/nominatim-geocoder), the official [Nominatim search API documentation](https://nominatim.org/release-docs/develop/api/Search/) and examples below.
 
 These functions use the underlying Nominatim API, which is rate limited. If you are adding the stored field to a table with many existing rows, you may see that the fields will be filled out slowly (at a rate of one per second).
 
