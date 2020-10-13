@@ -20,7 +20,7 @@ To use this library, you must create two stored calculated variables of type Flo
 
 Example: In this example we are converting UK postcodes to latitude and longitude so they can be displayed on a map. The table of interest has a field of type String named `postcode` containing the full UK postcode, a 6 to 7 digit string.
 
-We had two stored calculated fields labelled `lat` and `long`. We give them these formulae:
+We add two stored calculated fields labelled `lat` and `long`, with these formulae:
 
 - `lat` formula: `geocode_lat({country: 'uk', postalcode: postcode })`
 - `long` formula: `geocode_long({country: 'uk', postalcode: postcode })`
