@@ -2,6 +2,8 @@
 
 Geocoding with Nominatim from OpenStreetMap
 
+Available from the Saltcorn store as "nominatim-geocode"
+
 This plug-in supplies functions for geocoding (converting addresses to latitude and longitude coordinates) for use in Saltcorn calculated functions.
 
 Two functions are supplied: `geocode_lat` and `geocode_long`. These two functions are identical in their arguments and operation and differ only in that the former returns latitude and the latter returns longitude. Both functions:
