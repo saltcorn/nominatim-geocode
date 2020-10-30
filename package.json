@@ -1,6 +1,6 @@
 {
   "name": "@saltcorn/nominatim-geocode",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Geocoding with Nominatim",
   "main": "index.js",
   "dependencies": {
