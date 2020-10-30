@@ -1,5 +1,14 @@
-const Nominatim = require("nominatim-geocoder");
-const geocoder = new Nominatim();
+const Nominatim = require("./nominatim");
+
+const geocoder = new Nominatim(
+  {
+    /* No options */
+  },
+  {
+    format: "json",
+    limit: 1,
+  }
+);
 
 const geocode_lat = {
   run: async (query) => {
