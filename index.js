@@ -16,6 +16,8 @@ const geocode_lat = {
     if (response.length > 0) return response[0].lat;
   },
   isAsync: true,
+  description: "Return latitude (type Float) of location",
+  arguments: [{ name: "query", type: "Object" }],
 };
 const geocode_long = {
   run: async (query) => {
@@ -23,6 +25,8 @@ const geocode_long = {
     if (response.length > 0) return response[0].lon;
   },
   isAsync: true,
+  description: "Return longitude (type Float) of location",
+  arguments: [{ name: "query", type: "Object" }],
 };
 module.exports = {
   sc_plugin_api_version: 1,
