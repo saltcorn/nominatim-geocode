@@ -14,6 +14,7 @@ const SingletonContext = {
   cache: new Cache(cacheSize),
 };
 
+const version = require("./package.json").version;
 class Nominatim {
   constructor(options, queryOptions) {
     const defaultOptions = {
@@ -87,13 +88,20 @@ class Nominatim {
           resolve(cachedResponse);
           return;
         }
+        const headers = {
+          "User-Agent": `Saltcorn nominatim-geocode/${version}`,
+        };
 
         axios
-          .get(url, { params: queryObject.plainObject() })
+          .get(url, {
+            params: queryObject.plainObject(),
+            headers,
+          })
           .then((response) => {
             resolve(response.data);
           })
           .catch((error) => {
+            console.error(error);
             SingletonContext.cache.remove(queryObject.hash());
             reject(error);
           });
